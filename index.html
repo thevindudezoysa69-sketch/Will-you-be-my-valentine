@@ -58,7 +58,12 @@
             I love the way you make my world better just by being in it.
         </p>
 
-        <button onclick="showMessage()">Click for a Surprise 💌</button>
+        <h2>Will you be my Valentine? 💕</h2>
+
+<button onclick="sayYes()">Yes ❤️</button>
+<button onclick="sayNo()" id="noBtn">No 😢</button>
+
+<p id="response" style="margin-top:20px; font-size:20px;"></p>
 
         <p id="secret" style="display:none; margin-top:20px; font-size:18px;">
             Will you be my Valentine again? ❤️  
@@ -67,10 +72,19 @@
     </div>
 
     <script>
-        function showMessage() {
-            document.getElementById("secret").style.display = "block";
-        }
-    </script>
+function sayYes() {
+    document.getElementById("response").innerHTML =
+        "YAYYY ❤️ You just made me the happiest person alive!";
+}
+
+function sayNo() {
+    var button = document.getElementById("noBtn");
+    button.style.position = "absolute";
+    button.style.left = Math.random() * 80 + "%";
+    button.style.top = Math.random() * 80 + "%";
+}
+</script>
+
 
 </body>
 </html>
